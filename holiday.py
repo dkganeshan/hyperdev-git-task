@@ -4,7 +4,7 @@ valid_codes = ['ny','ln','pr']
 while True: 
     print (" This is the program to calculate your holiday cost. Please enter NY - New york, LN for London and PR for Paris ")
     city_flight = input ("Enter the holiday destination code: ", )
-    if city_flight in valid_codes:
+    if city_flight.lower() in valid_codes:
         break 
   
 num_nights = input ("Enter number of nights of stay: ", )
@@ -19,13 +19,13 @@ def hotel_cost(num_nights):
 
  
 def plane_cost(city_flight):
-    if city_flight == "NY":
+    if city_flight.lower() == "ny":
         p_cost =  1000
         
-    if city_flight == "LN":
+    if city_flight.lower() == "ln":
         p_cost = 750
         
-    if city_flight == "PR":
+    if city_flight.lower() == "pr":
         p_cost = 500
     return p_cost
 
